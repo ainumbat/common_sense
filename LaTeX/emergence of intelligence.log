@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.27)  31 OCT 2024 18:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.27)  9 NOV 2024 11:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -428,6 +428,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 14.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+4.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
 <title_wheelchair.png, id=4, 501.875pt x 501.875pt>
 File: title_wheelchair.png Graphic file (type png)
 <use title_wheelchair.png>
@@ -456,58 +464,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--58
 
  []
 
-<AI_scores.png, id=24, 1009.7725pt x 222.8325pt>
+<AI_scores.png, id=25, 1009.7725pt x 222.8325pt>
 File: AI_scores.png Graphic file (type png)
 <use AI_scores.png>
 Package pdftex.def Info: AI_scores.png  used on input line 60.
 (pdftex.def)             Requested size: 393.8097pt x 86.90431pt.
 [3]
-<wheelchair_problem_0.png, id=37, 792.9625pt x 557.08125pt>
+<wheelchair_problem_0.png, id=38, 792.9625pt x 557.08125pt>
 File: wheelchair_problem_0.png Graphic file (type png)
 <use wheelchair_problem_0.png>
 Package pdftex.def Info: wheelchair_problem_0.png  used on input line 75.
 (pdftex.def)             Requested size: 309.25412pt x 217.26082pt.
  [4 <./AI_scores.png>]
-<wheelchair_problem_8a.png, id=47, 789.95125pt x 702.625pt>
+<wheelchair_problem_8a.png, id=48, 789.95125pt x 702.625pt>
 File: wheelchair_problem_8a.png Graphic file (type png)
 <use wheelchair_problem_8a.png>
 Package pdftex.def Info: wheelchair_problem_8a.png  used on input line 79.
 (pdftex.def)             Requested size: 284.38223pt x 252.9448pt.
-<wheelchair_problem_8b.png, id=48, 634.37pt x 926.46124pt>
+<wheelchair_problem_8b.png, id=49, 634.37pt x 926.46124pt>
 File: wheelchair_problem_8b.png Graphic file (type png)
 <use wheelchair_problem_8b.png>
 Package pdftex.def Info: wheelchair_problem_8b.png  used on input line 83.
 (pdftex.def)             Requested size: 228.37302pt x 333.52579pt.
  [5 <./wheelchair_problem_0.png> <./wheelchair_problem_8a.png>]
-<wheelchair_problem_1.png, id=55, 800.9925pt x 625.33624pt>
+<wheelchair_problem_1.png, id=56, 800.9925pt x 625.33624pt>
 File: wheelchair_problem_1.png Graphic file (type png)
 <use wheelchair_problem_1.png>
 Package pdftex.def Info: wheelchair_problem_1.png  used on input line 89.
 (pdftex.def)             Requested size: 312.38582pt x 243.88016pt.
  [6 <./wheelchair_problem_8b.png>]
-<wheelchair_problem_2.png, id=61, 805.0075pt x 601.24625pt>
+<wheelchair_problem_2.png, id=62, 805.0075pt x 601.24625pt>
 File: wheelchair_problem_2.png Graphic file (type png)
 <use wheelchair_problem_2.png>
 Package pdftex.def Info: wheelchair_problem_2.png  used on input line 93.
 (pdftex.def)             Requested size: 313.95166pt x 234.48508pt.
-<wheelchair_problem_3.png, id=62, 806.01125pt x 631.35875pt>
+<wheelchair_problem_3.png, id=63, 806.01125pt x 631.35875pt>
 File: wheelchair_problem_3.png Graphic file (type png)
 <use wheelchair_problem_3.png>
 Package pdftex.def Info: wheelchair_problem_3.png  used on input line 97.
 (pdftex.def)             Requested size: 298.21948pt x 233.59908pt.
  [7 <./wheelchair_problem_1.png> <./wheelchair_problem_2.png>]
-<wheelchair_problem_4.png, id=70, 806.01125pt x 952.55875pt>
+<wheelchair_problem_4.png, id=71, 806.01125pt x 952.55875pt>
 File: wheelchair_problem_4.png Graphic file (type png)
 <use wheelchair_problem_4.png>
 Package pdftex.def Info: wheelchair_problem_4.png  used on input line 101.
 (pdftex.def)             Requested size: 298.21948pt x 352.44122pt.
  [8 <./wheelchair_problem_3.png> <./wheelchair_problem_4.png>]
-<wheelchair_problem_5.png, id=79, 805.0075pt x 611.28375pt>
+<wheelchair_problem_5.png, id=80, 805.0075pt x 611.28375pt>
 File: wheelchair_problem_5.png Graphic file (type png)
 <use wheelchair_problem_5.png>
 Package pdftex.def Info: wheelchair_problem_5.png  used on input line 107.
 (pdftex.def)             Requested size: 297.84811pt x 226.17145pt.
-<wheelchair_problem_6.png, id=80, 805.0075pt x 611.28375pt>
+<wheelchair_problem_6.png, id=81, 805.0075pt x 611.28375pt>
 File: wheelchair_problem_6.png Graphic file (type png)
 <use wheelchair_problem_6.png>
 Package pdftex.def Info: wheelchair_problem_6.png  used on input line 111.
@@ -528,18 +536,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--120
  []
 
 [10]
-<prime_numbers_a.png, id=98, 796.9775pt x 448.67625pt>
+<prime_numbers_a.png, id=99, 796.9775pt x 448.67625pt>
 File: prime_numbers_a.png Graphic file (type png)
 <use prime_numbers_a.png>
 Package pdftex.def Info: prime_numbers_a.png  used on input line 127.
 (pdftex.def)             Requested size: 294.87704pt x 166.00761pt.
-<prime_numbers_b.png, id=99, 804.00375pt x 425.59pt>
+<prime_numbers_b.png, id=100, 804.00375pt x 425.59pt>
 File: prime_numbers_b.png Graphic file (type png)
 <use prime_numbers_b.png>
 Package pdftex.def Info: prime_numbers_b.png  used on input line 131.
 (pdftex.def)             Requested size: 297.47673pt x 157.46582pt.
  [11 <./prime_numbers_a.png> <./prime_numbers_b.png>]
-<arcagi_1.png, id=107, 1176.395pt x 388.45125pt>
+<arcagi_1.png, id=108, 1176.395pt x 388.45125pt>
 File: arcagi_1.png Graphic file (type png)
 <use arcagi_1.png>
 Package pdftex.def Info: arcagi_1.png  used on input line 149.
@@ -560,7 +568,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 160--161
  []
 
 [13]
-<conclusion_image.png, id=121, 827.09pt x 412.54124pt>
+<conclusion_image.png, id=122, 827.09pt x 412.54124pt>
 File: conclusion_image.png Graphic file (type png)
 <use conclusion_image.png>
 Package pdftex.def Info: conclusion_image.png  used on input line 177.
@@ -587,10 +595,10 @@ nged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 12737 strings out of 476139
- 227828 string characters out of 5794453
+ 12758 strings out of 476139
+ 228195 string characters out of 5794453
  1933975 words of memory out of 5000000
- 34585 multiletter control sequences out of 15000+600000
+ 34603 multiletter control sequences out of 15000+600000
  566480 words of font info for 64 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  108i,7n,107p,10922b,592s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -601,11 +609,12 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "emergence of intelligence.pdf" (15 pages, 2925610 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on "emergence of intelligence.pdf" (15 pages, 2935017 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
+ 185 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
  26 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
