@@ -7,8 +7,8 @@
 \begin{document}
 
 \title{Can Intelligence Emerge Through Merely Knowing All the Answers?}
-\subtitle{Rethinking Assumptions in the Pursuit of AGI \\ — Unveiling the Limits of LLMs —}
-\author{Rashid Mehmood, Prajun Trital \\ \{laravelprodev, prajuncs\}@gmail.com }
+\subtitle{Rethinking Assumptions in the Pursuit of AGI}
+\author{Rashid Mehmood \\ \{laravelprodev@gmail.com\} }
 
 \maketitle
 
@@ -147,6 +147,35 @@ To evaluate ChatGPT, we selected a straightforward ARC puzzle with four solved e
 \vspace{1cm}
 
 \includegraphics[width=0.99\linewidth, center]{arcagi_1.png}
+
+\vspace{0.5cm}
+
+\begin{small}
+\textbf{Gemini Flash API}
+\end{small}
+We have tested first 50 puzzles of public evaluation set of ARC using raw json input with models of gemini 1.5-flash and 2.0-flash-experimental. Starting from oirinal examples given with ARC puzzles we gave additional examples like vertical, diagonal and horizontal flip, colors shifting etc. We increased number of additional examples with each batch from 0 to 9, which means each original example of puzzle will have 9 additional training examples and if 5 examples are originally given with puzzle then total examples will become 50. Yellow line representing the threshold is basically the similarity between test input and true output of puzzle. e.g if gemini output of a given puzzle is 91 similar with true output and the threshold for that puzzle is 90 then we can say that gemini only solved 1 of the puzzle because 90 of it was already similar or solved. Threshold 0 means test input and true output matrix size does not match. As you can see in figure there is no significant improvement with additional examples. Gemini could not even cross the threshold in more than half of the puzzles.
+
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        Batch & Temp & Additional Examples & Total Attempted & Above Threshold & Solved 100\% \\ 
+        \hline
+        batch-6 & 1.65 & 0 & 49 & 23 & 2 (4.08\%)   \\ 
+        batch-7 & 1.65 & 2 & 50 & 23 & 2 (4.00\%)   \\ 
+        batch-8 & 1.65 & 4 & 48 & 19 & 2 (4.17\%)   \\ 
+        batch-9 & 1.65 & 9 & 42 & 21 & 2 (4.76\%)   \\ 
+        \hline
+    \end{tabular}
+    \caption{ gemini-1.5-flash.png results }
+    \label{tab:example}
+\end{table}
+
+\includegraphics[width=0.99\linewidth, center]{gemini-1.5-flash.png}
+
+\includegraphics[width=0.99\linewidth, center]{gemini-2.0-flash-thinking-exp-01-21.png}
 
 \vspace{2cm}
 
