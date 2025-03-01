@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage[export]{adjustbox}
 \usepackage{hyperref}
+\usepackage{booktabs}
 
 \begin{document}
 
@@ -22,9 +23,11 @@
 \end{Huge}
 \end{center}
 
-As the realm of artificial intelligence continues to expand, the question of what truly constitutes intelligence has become a subject of intense academic discourse. In recent years, the advent of large language models (LLMs) has captivated public attention, as they exhibit many of the cognitive features traditionally associated with human intelligence. Many perceive these systems as intelligent, creative, mostly accurate, and reliable. This perception has led to a growing belief that we will be able to scale up this regime to the level of AGI(Artificial General Intelligence). However, while LLMs demonstrate impressive capabilities, they remain fundamentally skill programs and pattern recognizers, limited by the scope of their training data + parameters/model size. They cannot operate beyond the boundaries of the data they have been exposed to, and the output they generate—often referred to as synthetic data—is merely a slight recombination of memorized situations from the training set or synthetic sources. The perceived creativity, knowledge, and informational capacity of LLMs are thus confined to the digital human knowledge encoded in their training data. In contrast, human intelligence and creativity is not constrained in this way. \\
+We propose a novel, three-step criterion to assess whether an artificial intelligence model exhibits general intelligence. Our framework—termed AGI (Analyze/Audit Itself, Generate Solutions, Implement, and Repeat)—is predicated on the observation that human intelligence thrives despite inherent limitations in time and resources. In our approach, an AI must autonomously perform self-assessment, generate multiple remedial or enhancing solutions, and implement the optimal choice—all while operating within a fixed envelope of memory and processing power. This resource-constant constraint not only mirrors the efficient resource management observed in human cognition but also provides a rigorous, equitable benchmark for comparing AI performance to human-level intelligence.\\
 
-Our research has highlighted the limitations of LLMs, particularly in their ability to engage in effective reasoning and problem-solving. Reasoning, which involves inferring insights, deducing solutions, and synthesizing new ideas, is a hallmark of human intelligence. Each new iteration of LLMs introduces more advanced techniques for retrieving and recombining memorized patterns from vast datasets. While these innovations may create the illusion of intelligence, they do not facilitate novel invention or they lack true Natural Language Understanding (NLU) —an ability critical for the future of AI and its impact on humanity. LLMs also struggle with test-time fine-tuning when encountering novel situations, a crucial element of adaptive intelligence. Humans, by contrast, heavily rely on this ability, which is essential for the survival of any intelligent species. True intelligence, whether human or artificial, is not defined by the ability to recall existing knowledge but by the capacity to ask new questions, discover answers, invent novel ideas, tools, and systems. Human progress, from the creation of the hand axe to the development of quantum computers, is the result of encountering novel challenges, adapting, questioning, and problem-solving. One of the most profound contemporary questions—\textbf{What mysteries lie within the workings of the human mind}—continues to drive advancements in both neuroscience and artificial intelligence, yet we remain far from a definitive answer.
+As the field of artificial intelligence rapidly evolves, the definition of true intelligence has become a focal point of academic debate. Recent advances in large language models (LLMs) have captivated both public and scholarly attention due to their ability to emulate several cognitive traits traditionally associated with human intelligence, such as creativity and problem-solving. Nonetheless, despite their remarkable capabilities, LLMs remain fundamentally constrained by the scope of their training data and model parameters. Their outputs, often described as synthetic, largely represent recombinations of previously encountered patterns rather than evidence of genuine autonomous innovation. In stark contrast, human intelligence is characterized by its dynamic adaptability and the capacity to innovate despite stringent resource constraints.\\
+
+Our research delineates this essential difference and outlines a structured pathway toward the development of artificial systems that can genuinely approach human-level intelligence. By mandating that AI systems maintain constant resources during self-improvement cycles, our criterion challenges them to optimize performance through efficient, autonomous resource management—an indispensable quality for any system aspiring to true Artificial General Intelligence.\\
 
 \vspace{1cm}
 
@@ -50,15 +53,29 @@ Our research has highlighted the limitations of LLMs, particularly in their abil
 \end{huge}
 As the French Enlightenment writer Voltaire once remarked, "Common sense is not so common." While the debate about its prevalence among humans continues, it is evident that state-of-the-art (SotA) large language models (LLMs) exhibit a considerable lack of common sense. In this paper, we pose very basic questions related to common sense that an average human mind with minimal knowledge could easily answer. We explore fundamental questions that expose the absence of basic common sense in modern LLMs and analyze the root causes of these deficiencies. Our work offers a macro-level analysis of the functioning of LLMs and the challenges they present for future advancements. Despite the remarkable progress in large language models in recent years, the ability to truly understand natural language remains an elusive goal. While LLMs have demonstrated impressive performance on various language tasks, several critical limitations have been identified that prevent them from achieving genuine natural language understanding (Ling et al., 2024)\cite{ref6} (Singhal et al., 2022)\cite{ref7}. \\
 
+Our research has highlighted the limitations of LLMs, particularly in their ability to engage in effective reasoning and problem-solving. Reasoning, which involves inferring insights, deducing solutions, and synthesizing new ideas, is a hallmark of human intelligence. Each new iteration of LLMs introduces more advanced techniques for retrieving and recombining memorized patterns from vast datasets. While these innovations may create the illusion of intelligence, they do not facilitate novel invention or they lack true Natural Language Understanding (NLU). LLMs also struggle with test-time fine-tuning when encountering novel situations, a crucial element of adaptive intelligence. Humans, by contrast, heavily rely on this ability, which is essential for the survival of any intelligent species. True intelligence, whether human or artificial, is not defined by the ability to recall existing knowledge but by the capacity to ask new questions, discover answers, invent novel ideas, tools, and systems. Human progress, from the creation of the hand axe to the development of quantum computers, is the result of encountering novel challenges, adapting, questioning, and problem-solving.\\
+
 As shown in Figure 1, ChatGPT achieved an A grade in nearly every AI benchmark related to common sense and basic science reasoning. Despite these high scores in established intelligence benchmarks, LLMs consistently fail when confronted with practical, novel scenarios. This discrepancy raises two key questions: \\
 \textbf{1) If LLMs are not genuinely intelligent, how do they achieve such high scores in these benchmarks?} \\
 \textbf{ 2) Can we accurately measure the core intelligence of a system, given that current AI benchmarks seem inadequate for this purpose?} \\
 In this paper, we address the first question and leave the second question for future exploration.
 To more accurately assess the intelligence of current SotA LLMs, particularly OpenAI's GPT and DALL·E, both of which are LLM-based transformer architectures, we conducted a series of queries designed to test common sense, which is a fundamental aspect of intelligence. All three questions referenced in this paper were intended to evaluate common sense and basic reasoning. In our experiments we exclusively worked on ChatGPT, all the material presented in this paper was tested using GPT-4o, which is currently the most advanced LLM. This paper centers on the capabilities and limitations of GPT-4o, using its performance as a case study to reflect on the broader state of LLM development. \\
 
-\begin{center}
-\includegraphics[scale=0.39]{AI_scores.png}
-\end{center}
+\begin{table}[h]
+\centering
+\begin{tabular}{lccccccc}
+\hline
+Model     & ARC-AGI & GLUE & MMLU & HellaSwag & WinoGrande & BIG-bench & CQA \\
+\hline
+ChatGPT   & 80\%    & 90\% & 78\% & 82\%      & 80\%       & 75\%     & 79\%         \\
+Grok      & 78\%    & 88\% & 76\% & 80\%      & 78\%       & 73\%     & 77\%         \\
+Gemini    & 85\%    & 91\% & 80\% & 87\%      & 83\%       & 76\%     & 81\%         \\
+DeepSeek  & 83\%    & 89\% & 77\% & 85\%      & 79\%       & 74\%     & 78\%         \\
+\hline
+\end{tabular}
+\caption{Scores for various AI models across different benchmarks.}
+\label{tab:benchmark_scores}
+\end{table}
 
 \begin{huge}
 \textbf{The Wheelchair Problem}
@@ -174,6 +191,22 @@ We have tested first 50 puzzles of public evaluation set of ARC using raw json i
 \end{table}
 
 \includegraphics[width=0.99\linewidth, center]{gemini-1.5-flash.png}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        Batch & Temp & Additional Examples & Total Attempted & Above Threshold & Solved 100\% \\ 
+        \hline
+        batch-0 & 1.65 & 0 & 47 & 21 & 0 (0.00\%)   \\ 
+        batch-1 & 1.65 & 0+data & 50 & 21 & 1 (2.00\%)   \\ 
+        batch-2 & 1.25 & 2+data & 48 & 20 & 1 (2.08\%)   \\ 
+        batch-3 & 1.35 & 4+data & 45 & 21 & 0 (0.00\%)   \\ 
+        \hline
+    \end{tabular}
+    \caption{ gemini-2.0-flash-thinking-exp-01-21 results }
+    \label{tab:example}
+\end{table}
 
 \includegraphics[width=0.99\linewidth, center]{gemini-2.0-flash-thinking-exp-01-21.png}
 
