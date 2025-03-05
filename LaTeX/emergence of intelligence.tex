@@ -67,10 +67,10 @@ To more accurately assess the intelligence of current SotA LLMs, particularly Op
 \hline
 Model     & ARC-AGI & GLUE & MMLU & HellaSwag & WinoGrande & BIG-bench & CQA \\
 \hline
-ChatGPT   & 80\%    & 90\% & 78\% & 82\%      & 80\%       & 75\%     & 79\%         \\
-Grok      & 78\%    & 88\% & 76\% & 80\%      & 78\%       & 73\%     & 77\%         \\
-Gemini    & 85\%    & 91\% & 80\% & 87\%      & 83\%       & 76\%     & 81\%         \\
-DeepSeek  & 83\%    & 89\% & 77\% & 85\%      & 79\%       & 74\%     & 78\%         \\
+ChatGPT o3 High   & 80\%    & 90\% & 78\% & 82\%      & 80\%       & 75\%     & 79\%         \\
+Grok Beta      & 78\%    & 88\% & 76\% & 80\%      & 78\%       & 73\%     & 77\%         \\
+Gemini v1    & 85\%    & 91\% & 80\% & 87\%      & 83\%       & 76\%     & 81\%         \\
+DeepSeek v2  & 83\%    & 89\% & 77\% & 85\%      & 79\%       & 74\%     & 78\%         \\
 \hline
 \end{tabular}
 \caption{Scores for various AI models across different benchmarks.}
@@ -131,9 +131,9 @@ Despite specifically mentioning multiple sprockets and foot pedals again same pr
 \begin{Large}
 \textbf{Disparities in Textual and Visual Interpretation within Large Language Models}
 \end{Large}
-Despite ChatGPT’s seemingly accurate theoretical explanation of a wheelchair mechanism, the image it generated was far from functional. In the image, four sprockets are attached to a chain, resembling the tracks of a military tank. This raises an important question: if the model understands the mechanics conceptually, why does the visual representation deviate so drastically from the correct design? The answer lies in the model's failure to grasp the practical nuances of wheelchair and bicycle operation. Wheelchair and a military tank use \textbf{differential steering mechanism} to control direction by manipulating the speed or movement of wheels or tracks. In wheelchairs, this is done by rotating the wheels at different speeds, while in tanks, the tracks are controlled similarly. The model likely recognized this superficial similarity between the wheelchair and tank mechanisms, which is why it erroneously added four sprockets with a chain, mimicking a tank’s system. However, this demonstrates that GPT failed to understand the depth of question and exposes that it has no actual understanding of a very simple mechanism.This example illustrates the broader issue of shortcut learning as described by Tao et al. (2024)\cite{ref5}. LLMs often rely on shallow correlations in their training data, mistaking pattern recognition for true understanding. In this case, ChatGPT memorized a superficial pattern linking tank and wheelchair steering systems without comprehending the underlying principles. This aligns with findings from The Reversal Curse by Evans et al., which highlights the brittleness of LLMs when they encounter tasks requiring deeper reasoning (Evans et al., 2024)\cite{ref1}.
+Despite ChatGPT’s seemingly accurate theoretical explanation of a wheelchair mechanism, the image it generated was far from functional. In the image, four sprockets are attached to a chain, resembling the tracks of a military tank. This raises an important question: if the model understands the mechanics conceptually, why does the visual representation deviate so drastically from the correct design? The answer lies in the model's failure to grasp the practical nuances of wheelchair and bicycle operation. Wheelchair and a military tank use \textbf{differential steering mechanism} to control direction by manipulating the speed or movement of wheels or tracks. In wheelchairs, this is done by rotating the wheels at different speeds, while in tanks, the tracks are controlled similarly. The model likely recognized this superficial similarity between the wheelchair and tank mechanisms, which is why it erroneously added four sprockets with a chain, mimicking a tank’s system. However, this demonstrates that GPT failed to understand the depth of question and exposes that it has no actual understanding of a very simple mechanism.This example illustrates the broader issue of shortcut learning as described by Tao et al. (2024)\cite{ref5}. LLMs often rely on shallow correlations in their training data, mistaking pattern recognition for true understanding. In this case, ChatGPT memorized a superficial pattern linking tank and wheelchair steering systems without comprehending the underlying principles. This aligns with findings from The Reversal Curse by Evans et al., which highlights the brittleness of LLMs when they encounter tasks requiring slightly deeper reasoning (Evans et al., 2024)\cite{ref1}.
 
-No matter how clearly you explain a mechanism to ChatGPT, even with its extensive mechanical knowledge surpassing that of a senior engineer, it often fails to deliver the expected results in novel situations. While its textual explanations may appear accurate, the model's limitations become evident in practical tasks such as image generation. A common counterargument is that identical issues mentioned in past research papers have been resolved, which might be true because similar problems have been manually addressed and rectified in the past, as noted in papers like Alice in Wonderland\cite{ref2} and The Reversal Curse\cite{ref1}. However, when the query is slightly modified or a new technique is introduced that exploits a known loophole, these models tend to fail once again, as these issues have persisted since the inception of LLMs. Some of the previously recognized issues in past research, which seem to be resolved, are actually just obscured, much like giving painkillers to a patient with a severe disease. Until the underlying condition is treated, the pain is likely to resurface. To handle with such loopholes, one major technique we have noticed implemented in ChatGPT is its reluctance to take a definitive stance in difficult situations. The response is often slightly ambiguous, supporting both sides of an argument so that it cannot be proven entirely wrong. This also allows LLM the flexibility to mold its stance in the future. This tactic resembles the techniques employed by politicians and religious leaders—whether the model learned this unintentionally or it was intentionally programmed by the development team remains unclear. Unless the core issues are addressed, merely feeding LLMs more skill programes and memorized situations will not result in true intelligence, a concern echoed by François Chollet in On the Measure of Intelligence (2019)\cite{ref3}. \\ \\ \\ 
+No matter how clearly you explain a mechanism to ChatGPT, even with its extensive mechanical knowledge surpassing that of a senior engineer, it often fails to deliver the expected results in novel situations. While its textual explanations may appear accurate, the model's limitations become evident in practical tasks such as image generation. A common counterargument is that identical issues mentioned in past research papers have been resolved, which might be true because similar problems have been manually addressed and rectified in the past, as noted in papers like Alice in Wonderland\cite{ref2} and The Reversal Curse\cite{ref1}. However, when the query is slightly modified or a new technique is introduced that exploits a known loophole, these models tend to fail once again, as these issues have persisted since the inception of LLMs. Some of the previously recognized issues in past research, which seem to be resolved, are actually just obscured, much like giving painkillers to a patient with a severe disease. Until the underlying condition is treated, the pain is likely to resurface. To handle with such loopholes, one major technique we have noticed implemented in all SotA LLMs is their reluctance to take a definitive stance in difficult situations. The response is often slightly ambiguous, supporting both sides of an argument so that it cannot be proven entirely wrong. This also allows LLM the flexibility to mold its stance in the future. This tactic resembles the techniques employed by politicians and religious leaders—whether the model learned this unintentionally or it was intentionally programmed by the development team remains unclear. Unless the core issues are addressed, merely feeding LLMs more skill programes and memorized situations will not result in true intelligence, a concern echoed by François Chollet in On the Measure of Intelligence (2019)\cite{ref3}. \\ \\ \\ 
 
 \begin{huge}
 \textbf{Mathematical Common Sense}
@@ -155,9 +155,26 @@ When we asked the same question with exactly same values again, ChatGPT not only
 \begin{huge}
 \textbf{Challenges of LLMs in Abstraction and Reasoning}
 \end{huge}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lcc}
+\toprule
+Task Category                  & Number of Tasks & Difficulty \\
+\midrule
+Public Training Tasks          & 400             & Easy       \\
+Public Evaluation Tasks        & 400             & Hard       \\
+Semi-private Evaluation Tasks  & 100             & Hard       \\
+Private Evaluation Tasks       & 100             & Hard       \\
+\bottomrule
+\end{tabular}
+\caption{ARC-AGI-1 dataset composition: 1,000 tasks split into four subsets.}
+\label{tab:arcagi1}
+\end{table}
+
 The Abstraction and Reasoning Corpus (ARC) for Artificial General Intelligence (AGI) is a novel metric designed to evaluate the general intelligence of systems, rather than merely their skill. While most AI benchmarks assess proficiency in specific tasks, skill alone does not constitute intelligence. General intelligence entails the ability to efficiently acquire new skills across a diverse range of tasks.
 
-As Dr. François Chollet remarked at the AGI Conference 2024\cite{ref9}, \textbf{"Displaying skill in any number of tasks does not demonstrate intelligence. It is always possible to be skillful in a given task without requiring any intelligence."} Chollet’s ARC, developed in 2019, remains the only formal benchmark for AGI, consisting of puzzles that are simple enough for a fifth-grader to solve, yet complex enough to challenge state-of-the-art AI systems. The average human benchmark for ARC puzzles is 85%.
+As Dr. François Chollet remarked at the AGI Conference 2024\cite{ref9}, \textbf{"Displaying skill in any number of tasks does not demonstrate intelligence. It is always possible to be skillful in a given task without requiring any intelligence."} Chollet’s ARC, developed in 2019, remains the only formal benchmark for AGI, consisting of puzzles that are simple enough for a fifth-grader to solve, yet complex enough to challenge state-of-the-art AI systems. The average human benchmark for ARC puzzles is 85\%.
 
 To evaluate ChatGPT, we selected a straightforward ARC puzzle with four solved examples and asked the model to explain the underlying logic. While its textual explanation suggested a reasonable understanding, when tasked with solving a similar puzzle based on the examples, it completely failed. We then asked it to calculate the number of rows and columns in one of the images, and it once again failed—this time with misplaced confidence in its incorrect answer. This underscores the gap between abstractly understanding a problem and effectively applying that understanding to solve it.
 
@@ -167,12 +184,13 @@ To evaluate ChatGPT, we selected a straightforward ARC puzzle with four solved e
 
 \vspace{0.5cm}
 
+As shown in Table 1, latest models of top LLMs have now "cracked" ARC-AGI, with arcprize.org confirming that ChatGPT o3 High (Tuned) achieved an 88\% score on the Semi-Private Evaluation set. These high scores result from benchmarks specifically targeted in every new LLM version, on which the models are highly trained. Our research demonstrates that a model’s performance cannot exceed its predetermined threshold at inference time, regardless of how simplified the benchmarks or hints are. In other words, you cannot improve a trained model simply by tweaking its inputs; instead, you must address its key issues and train a new model. \\
+
 \begin{small}
-\textbf{Gemini Flash API}
+\textbf{Gemini Flash Experiment} \\
 \end{small}
-We have tested first 50 puzzles of public evaluation set of ARC using raw json input with models of gemini 1.5-flash and 2.0-flash-experimental. Starting from oirinal examples given with ARC puzzles we gave additional examples like vertical, diagonal and horizontal flip, colors shifting etc. We increased number of additional examples with each batch from 0 to 9, which means each original example of puzzle will have 9 additional training examples and if 5 examples are originally given with puzzle then total examples will become 50. Yellow line representing the threshold is basically the similarity between test input and true output of puzzle. e.g if gemini output of a given puzzle is 91 similar with true output and the threshold for that puzzle is 90 then we can say that gemini only solved 1 of the puzzle because 90 of it was already similar or solved. Threshold 0 means test input and true output matrix size does not match. As you can see in figure there is no significant improvement with additional examples. Gemini could not even cross the threshold in more than half of the puzzles.
-
-
+To further illustrate that LLM capabilities are constrained by their training data and techniques, we tested the first 50 puzzles from the ARC public evaluation set using raw JSON inputs on Gemini 1.5-Flash and 2.0-Flash-Experimental long context API. We augmented the original ARC puzzle examples with additional variations—vertical, diagonal, and horizontal flips, and color shifts—escalating the number of examples per puzzle from 0 to 9 (i.e., from 5 to 50 total examples per puzzle). The yellow line in our figures represents the similarity threshold between the test input and the true output; for instance, if Gemini’s output is 91\% similar to the true output and the threshold is 90\%, then only 1\% of the puzzle was effectively solved, as 90\% was already met by default. A threshold of 0\% indicates a mismatch in matrix size between the test input and true output. \\
+Our results show no significant improvement with additional examples—Gemini failed to exceed the threshold in over half the puzzles. In essence, if Gemini 1.5 achieves only a 5\% score on the AGI benchmark, then no amount of simplification can enhance its performance. This confirms that a model's abilities are inherently limited to the training data it has received. \\
 
 \begin{table}[h]
     \centering
@@ -212,12 +230,48 @@ We have tested first 50 puzzles of public evaluation set of ARC using raw json i
 
 \vspace{2cm}
 
-\begin{huge}
-\textbf{Reevaluating the Path to AGI: Beyond Scaling LLMs}
-\end{huge}
-In a May 15, 2024 interview on Dwarkesh Patel’s YouTube channel\cite{ref8}, OpenAI cofounder John Schulman discussed cutting-edge developments in AI and the goal of achieving AGI by 2027, stating that their latest model can autonomously run entire businesses. While this vision is undeniably optimistic, it is important to recognize that running even a small-scale business requires significant general intelligence and the ability to handle novel situations multiple times a day. This assertion reveals a fundamental misunderstanding of what true intelligence necessitates. As Dr. François Chollet points out, life is full of nuances, and we regularly make decisions we've never encountered before. LLMs, however, consistently fail when faced with even slightly novel circumstances. Although I remain hopeful about AI's potential, it is clear that \textbf{focusing exclusively on scaling LLMs is a fundamentally flawed approach to achieving General Intelligence}.
+\textbf{Measuring True Intelligence: Challenges, Limitations, and a Proposal for AGI Criteria} \\
+However, many challenges—such as achieving true reasoning, common sense, and ethical alignment—require breakthroughs that extend beyond merely scaling existing architectures. Until these advances are made, AI remains a powerful yet flawed tool that performs best under human oversight. Below is a list of key issues observed in current state-of-the-art LLMs:
+\begin{itemize}
+    \item Lack of true understanding/comprehension
+    \item Lack of common sense
+    \item Context limitations or shallow reasoning
+    \item Resource intensity
+    \item Lack of transparency (black box behavior)
+    \item Vulnerability to adversarial attacks
+    \item Hallucinations
+\end{itemize}
+Interestingly, none of these issues are self-identified by AI/LLMs; they are all diagnosed by humans—whether researchers, users, or auditors—through testing, analysis, or observation. Current AI/LLMs lack the self-awareness and introspection needed to autonomously recognize their own limitations. Although these systems can describe their flaws if prompted, this is based on training data (human-authored critiques) or web searches rather than genuine self-diagnosis. \\
 
-The issue lies not merely in the scale of LLMs, but in the foundational limitations of the LLM approach. As demonstrated in several examples we have tested, including the three discussed earlier, ChatGPT and similar models continually fail to exhibit true reasoning or understanding beyond pattern recognition. For those interested, additional examples are available on our GitHub link, further proving that the current trajectory of LLM development is unlikely to fulfill the promise of AGI. Intelligence cannot be forced to emerge simply by tuning weights and biases, no matter how large the model's parameters or how extensive the training data.
+As demonstrated in Table 1, top AI models have achieved remarkable scores on benchmarks related to common sense and basic science reasoning. Yet, despite these high scores, LLMs consistently falter when confronted with practical, novel scenarios. This discrepancy raises an important question: Can we accurately measure the core intelligence of a system when current AI benchmarks seem inadequate for this purpose? \\
+
+At present, AI and LLMs have not independently invented any digital tool or function in the way that humans have created entirely novel and foundational innovations. However, human researchers have developed AI-generated enhancements and optimizations that significantly improve performance. In light of these observations, we propose a simple yet rigorous AGI criterion—one that tests an AI/LLM model's general intelligence and cannot be easily circumvented unless true AGI is achieved. \\
+
+\begin{huge}
+\textbf{AGI Criteria: Beyond Scaling LLMs}
+\end{huge}
+We have proposed a very simple 3 steps AGI criteria to check whether the current LLMs and future intelligent models hold the test of human level intelligence. An AI system can be considered Artificial General Intelligence (AGI) if it independently pass AGI Criteria without human intervention: \\ \\
+\textbf{Analyze/Audit Itself} – The AI must recognize issues or limitations in its own body of code, reasoning, context and abstraction. \\
+\textbf{Generate Solutions} – For a specific problem chosen by AI itself based on its priority It should be able to generate multiple possible ways to fix or improve itself. \\
+\textbf{Implement and Repeat} – The AI must choose the best solution and implement it and repeat the process. \\
+
+\textbf{Conditions}
+AI Resources will remain constant during that process, initially limited amount of extra memory and resources should be provided to the AI system then it should remain constant then it should be upto the AI system to manage those resources like Humans do \\
+
+\begin{huge}
+\textbf{Design and Operational Implications} \\
+\end{huge}
+\textbf{Prioritization of Tasks:} \\
+The AGI would need to learn which tasks are most critical and allocate resources accordingly. It might, for instance, reserve more memory for tasks that require deep introspection or learning, and less for routine operations. \\
+\textbf{Trade-Offs and Decision-Making:} \\
+Limited resources mean that the AI must sometimes make trade-offs. For example, a more resource-intensive self-analysis might be deferred in favor of immediate, less demanding tasks. This trade-off is similar to how humans decide between deep reflection and rapid decision-making based on available mental energy and time. \\
+\textbf{Algorithmic Innovation:} \\
+With a cap on resources, the AGI is pushed toward developing more efficient algorithms. This might lead to breakthroughs in how to compress information, optimize code, or structure reasoning in a way that minimizes overhead. \\
+\textbf{Safety and Stability:} \\
+Limiting resources can also serve as a safety mechanism. It prevents an AGI from overcommitting or making uncontrolled changes that might require external resources to manage—much like how our biological systems maintain homeostasis. \\
+
+
+Although I remain hopeful about AI's potential, it is clear that \textbf{focusing exclusively on scaling LLMs is a fundamentally flawed approach to achieving General Intelligence}. The issue lies not merely in the scale of LLMs, but in the foundational limitations of the LLM approach. As demonstrated in several examples we have tested, including the three discussed earlier, ChatGPT and similar models continually fail to exhibit true reasoning or understanding beyond pattern recognition. For those interested, additional examples are available on our GitHub link, further proving that the current trajectory of LLM development is unlikely to fulfill the promise of AGI. Intelligence cannot be forced to emerge simply by tuning weights and biases, no matter how large the model's parameters or how extensive the training data. \\
 
 LLMs, despite their impressive capabilities, are not progressing toward true intelligence—they excel at simulating responses but lack core attributes of intelligence, such as the ability to ask meaningful questions, innovate, or comprehend abstract concepts. \textbf{At best, LLMs can serve as one component within a broader intelligent system, but expecting them to form the sole foundation of AGI is misguided}. Intelligence is not about knowing everything; it is about confronting nuances with limited resources—qualities that cannot be engineered solely through data scaling and model optimization. To build a truly intelligent system, we need to fundamentally rethink our approach. \\ \\
 
@@ -257,7 +311,7 @@ In the race to improve LLMs, we are continually patching their limitations by re
     \bibitem{ref7}
 	Karan Singhal, Shekoofeh Azizi, Tao Tu, S. Sara Mahdavi, Jason Wei, et al. (2022). Large Language Models Encode Clinical Knowledge. arXiv:2212.13138v1.
 	\bibitem{ref8}
-	John Schulman (OpenAI Cofounder) Interview at Dwarkesh Patel Youtube channel (2024). \url{https://www.youtube.com/watch?v=Wo95ob_s_NI&t=2041s}
+	Replace Me (OpenAI Cofounder) Interview at Dwarkesh Patel Youtube channel (2024). \url{https://www.youtube.com/watch?v=Wo95ob_s_NI&t=2041s}
 	\bibitem{ref9}
 	François Chollet talk at AGI Conference, ARC Prize Youtube channel (2024). \url{https://www.youtube.com/watch?v=nL9jEy99Nh0&t=1450s}
     
