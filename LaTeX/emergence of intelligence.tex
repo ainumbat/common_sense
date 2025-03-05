@@ -23,7 +23,7 @@
 \end{Huge}
 \end{center}
 
-We propose a novel, three-step criterion to assess whether an artificial intelligence model exhibits general intelligence. Our framework—termed AGI (Analyze/Audit Itself, Generate Solutions, Implement, and Repeat)—is predicated on the observation that human intelligence thrives despite inherent limitations in time and resources. In our approach, an AI must autonomously perform self-assessment, generate multiple remedial or enhancing solutions, and implement the optimal choice—all while operating within a fixed envelope of memory and processing power. This resource-constant constraint not only mirrors the efficient resource management observed in human cognition but also provides a rigorous, equitable benchmark for comparing AI performance to human-level intelligence.\\
+We propose a novel, three-step criterion to assess whether an artificial intelligence model exhibits general intelligence. Our framework—termed \textbf{AGI (Analyze/Audit Itself, Generate Solutions, Implement and Repeat)}—is predicated on the observation that human intelligence thrives despite inherent limitations in time and resources. In our approach, an AI must autonomously perform self-assessment, generate multiple remedial or enhancing solutions, and implement the optimal choice—all while operating within a fixed envelope of memory and processing power. This resource-constant constraint not only mirrors the efficient resource management observed in human cognition but also provides a rigorous, equitable benchmark for comparing AI performance to human-level intelligence.\\
 
 As the field of artificial intelligence rapidly evolves, the definition of true intelligence has become a focal point of academic debate. Recent advances in large language models (LLMs) have captivated both public and scholarly attention due to their ability to emulate several cognitive traits traditionally associated with human intelligence, such as creativity and problem-solving. Nonetheless, despite their remarkable capabilities, LLMs remain fundamentally constrained by the scope of their training data and model parameters. Their outputs, often described as synthetic, largely represent recombinations of previously encountered patterns rather than evidence of genuine autonomous innovation. In stark contrast, human intelligence is characterized by its dynamic adaptability and the capacity to innovate despite stringent resource constraints.\\
 
@@ -55,27 +55,27 @@ As the French Enlightenment writer Voltaire once remarked, "Common sense is not 
 
 Our research has highlighted the limitations of LLMs, particularly in their ability to engage in effective reasoning and problem-solving. Reasoning, which involves inferring insights, deducing solutions, and synthesizing new ideas, is a hallmark of human intelligence. Each new iteration of LLMs introduces more advanced techniques for retrieving and recombining memorized patterns from vast datasets. While these innovations may create the illusion of intelligence, they do not facilitate novel invention or they lack true Natural Language Understanding (NLU). LLMs also struggle with test-time fine-tuning when encountering novel situations, a crucial element of adaptive intelligence. Humans, by contrast, heavily rely on this ability, which is essential for the survival of any intelligent species. True intelligence, whether human or artificial, is not defined by the ability to recall existing knowledge but by the capacity to ask new questions, discover answers, invent novel ideas, tools, and systems. Human progress, from the creation of the hand axe to the development of quantum computers, is the result of encountering novel challenges, adapting, questioning, and problem-solving.\\
 
-As shown in Figure 1, ChatGPT achieved an A grade in nearly every AI benchmark related to common sense and basic science reasoning. Despite these high scores in established intelligence benchmarks, LLMs consistently fail when confronted with practical, novel scenarios. This discrepancy raises two key questions: \\
-\textbf{1) If LLMs are not genuinely intelligent, how do they achieve such high scores in these benchmarks?} \\
-\textbf{ 2) Can we accurately measure the core intelligence of a system, given that current AI benchmarks seem inadequate for this purpose?} \\
-In this paper, we address the first question and leave the second question for future exploration.
-To more accurately assess the intelligence of current SotA LLMs, particularly OpenAI's GPT and DALL·E, both of which are LLM-based transformer architectures, we conducted a series of queries designed to test common sense, which is a fundamental aspect of intelligence. All three questions referenced in this paper were intended to evaluate common sense and basic reasoning. In our experiments we exclusively worked on ChatGPT, all the material presented in this paper was tested using GPT-4o, which is currently the most advanced LLM. This paper centers on the capabilities and limitations of GPT-4o, using its performance as a case study to reflect on the broader state of LLM development. \\
-
 \begin{table}[h]
 \centering
-\begin{tabular}{lccccccc}
+\begin{tabular}{lcccccc}
 \hline
-Model     & ARC-AGI & GLUE & MMLU & HellaSwag & WinoGrande & BIG-bench & CQA \\
+Model     & GLUE & MMLU & HellaSwag & WinoGrande & BIG-bench & CQA \\
 \hline
-ChatGPT o3 High   & 80\%    & 90\% & 78\% & 82\%      & 80\%       & 75\%     & 79\%         \\
-Grok Beta      & 78\%    & 88\% & 76\% & 80\%      & 78\%       & 73\%     & 77\%         \\
-Gemini v1    & 85\%    & 91\% & 80\% & 87\%      & 83\%       & 76\%     & 81\%         \\
-DeepSeek v2  & 83\%    & 89\% & 77\% & 85\%      & 79\%       & 74\%     & 78\%         \\
+ChatGPT          & 90\% & 78\% & 82\%      & 80\%       & 75\%     & 79\%         \\
+Grok             & 88\% & 76\% & 80\%      & 78\%       & 73\%     & 77\%         \\
+Gemini           & 91\% & 80\% & 87\%      & 83\%       & 76\%     & 81\%         \\
+DeepSeek         & 89\% & 77\% & 85\%      & 79\%       & 74\%     & 78\%         \\
 \hline
 \end{tabular}
 \caption{Scores for various AI models across different benchmarks.}
 \label{tab:benchmark_scores}
 \end{table}
+
+As shown in Table 1, SotA LLMs achieved more than 85\% score on average in nearly every AI benchmark related to common sense, basic and advance science reasoning. Despite these high scores in established intelligence benchmarks, LLMs consistently fail when confronted with practical, novel scenarios. This discrepancy raises two key questions: \\
+\textbf{1) If LLMs are not genuinely intelligent, how do they achieve such high scores in these benchmarks?} \\
+\textbf{ 2) Can we accurately measure the core intelligence of a system, given that current AI benchmarks seem inadequate for this purpose?} \\
+In this paper, we will try to address these questions with some visual examples to showcase the limitations of LLMs.
+To more accurately assess the intelligence of current SotA LLMs, particularly above mentioned models in table 1 those are mainly transformer based architectures, we conducted a series of queries designed to test common sense, which is a fundamental aspect of intelligence. All the questions/prompts referenced in this paper were intended to evaluate common sense and basic reasoning. In our experiments we exclusively worked on ChatGPT and Gemini Flash API, the other 2 models Grok and DeepSeek are slightly tested with similar expected results. This paper centers on the capabilities and limitations of SotA LLMs, using its performance as a case study to reflect on the broader state of LLM development. \\
 
 \begin{huge}
 \textbf{The Wheelchair Problem}
@@ -158,14 +158,14 @@ When we asked the same question with exactly same values again, ChatGPT not only
 
 \begin{table}[ht]
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{lcccc}
 \toprule
-Task Category                  & Number of Tasks & Difficulty \\
+Task Category                  & Number of Tasks & Difficulty & ChatGPT & Gemini \\
 \midrule
-Public Training Tasks          & 400             & Easy       \\
-Public Evaluation Tasks        & 400             & Hard       \\
-Semi-private Evaluation Tasks  & 100             & Hard       \\
-Private Evaluation Tasks       & 100             & Hard       \\
+Public Training Tasks          & 400             & Easy   & 92\%  & 90\%    \\
+Public Evaluation Tasks        & 400             & Hard   & 85\%   &  88\%   \\
+Semi-private Evaluation Tasks  & 100             & Hard   & 80\%  & 84\%    \\
+Private Evaluation Tasks       & 100             & Hard   & 78\%  & 82\%    \\
 \bottomrule
 \end{tabular}
 \caption{ARC-AGI-1 dataset composition: 1,000 tasks split into four subsets.}
@@ -174,7 +174,7 @@ Private Evaluation Tasks       & 100             & Hard       \\
 
 The Abstraction and Reasoning Corpus (ARC) for Artificial General Intelligence (AGI) is a novel metric designed to evaluate the general intelligence of systems, rather than merely their skill. While most AI benchmarks assess proficiency in specific tasks, skill alone does not constitute intelligence. General intelligence entails the ability to efficiently acquire new skills across a diverse range of tasks.
 
-As Dr. François Chollet remarked at the AGI Conference 2024\cite{ref9}, \textbf{"Displaying skill in any number of tasks does not demonstrate intelligence. It is always possible to be skillful in a given task without requiring any intelligence."} Chollet’s ARC, developed in 2019, remains the only formal benchmark for AGI, consisting of puzzles that are simple enough for a fifth-grader to solve, yet complex enough to challenge state-of-the-art AI systems. The average human benchmark for ARC puzzles is 85\%.
+As Dr. François Chollet remarked at the AGI Conference 2024\cite{ref9}, \textbf{"Displaying skill in any number of tasks does not demonstrate intelligence. It is always possible to be skillful in a given task without requiring any intelligence."} Chollet’s ARC, developed in 2019, remains the only formal benchmark for AGI, consisting of puzzles that are simple enough for a fifth-grader to solve, yet complex enough to challenge state-of-the-art AI systems. The average human score for ARC-AGI Benchmark is 85\%.
 
 To evaluate ChatGPT, we selected a straightforward ARC puzzle with four solved examples and asked the model to explain the underlying logic. While its textual explanation suggested a reasonable understanding, when tasked with solving a similar puzzle based on the examples, it completely failed. We then asked it to calculate the number of rows and columns in one of the images, and it once again failed—this time with misplaced confidence in its incorrect answer. This underscores the gap between abstractly understanding a problem and effectively applying that understanding to solve it.
 
@@ -184,13 +184,14 @@ To evaluate ChatGPT, we selected a straightforward ARC puzzle with four solved e
 
 \vspace{0.5cm}
 
-As shown in Table 1, latest models of top LLMs have now "cracked" ARC-AGI, with arcprize.org confirming that ChatGPT o3 High (Tuned) achieved an 88\% score on the Semi-Private Evaluation set. These high scores result from benchmarks specifically targeted in every new LLM version, on which the models are highly trained. Our research demonstrates that a model’s performance cannot exceed its predetermined threshold at inference time, regardless of how simplified the benchmarks or hints are. In other words, you cannot improve a trained model simply by tweaking its inputs; instead, you must address its key issues and train a new model. \\
+As shown in Table 2, latest models of top LLMs have now "cracked" ARC-AGI, with arcprize.org confirming that ChatGPT o3 High (Tuned) achieved an 88\% score on the Semi-Private Evaluation set. These high scores result from benchmarks specifically targeted in every new LLM version, on which the models are highly trained. Our research demonstrates that a model’s performance cannot exceed its predetermined threshold at inference time, regardless of how simplified the benchmarks or hints are. In other words, you cannot improve a trained model simply by tweaking its inputs; instead, you must address its key issues and train a new model. \\
 
 \begin{small}
 \textbf{Gemini Flash Experiment} \\
 \end{small}
-To further illustrate that LLM capabilities are constrained by their training data and techniques, we tested the first 50 puzzles from the ARC public evaluation set using raw JSON inputs on Gemini 1.5-Flash and 2.0-Flash-Experimental long context API. We augmented the original ARC puzzle examples with additional variations—vertical, diagonal, and horizontal flips, and color shifts—escalating the number of examples per puzzle from 0 to 9 (i.e., from 5 to 50 total examples per puzzle). The yellow line in our figures represents the similarity threshold between the test input and the true output; for instance, if Gemini’s output is 91\% similar to the true output and the threshold is 90\%, then only 1\% of the puzzle was effectively solved, as 90\% was already met by default. A threshold of 0\% indicates a mismatch in matrix size between the test input and true output. \\
-Our results show no significant improvement with additional examples—Gemini failed to exceed the threshold in over half the puzzles. In essence, if Gemini 1.5 achieves only a 5\% score on the AGI benchmark, then no amount of simplification can enhance its performance. This confirms that a model's abilities are inherently limited to the training data it has received. \\
+Our results indicate no significant improvement when additional examples were provided—Gemini failed to exceed the threshold in more than half of the puzzles. Essentially, if Gemini 1.5 only achieves a 5\% score on the AGI benchmark, no level of simplification appears capable of enhancing its performance. We also leveraged Gemini's long-context capabilities to perform multiple attempts per puzzle using data from previous attempts; however, this strategy did not yield any significant improvement, and the results remained highly unstable. These findings confirm that a model's abilities are inherently limited by the training data it receives, and \textbf{a trained model cannot be improved at test time.} \\
+
+\textbf{Interesting Fact:} We incorporated the correct output for each puzzle, labeled as \"true output,\" to assess the model's common sense abilities. Despite multiple attempts and clear hints provided to the model, the success rate remained below 40\%. \\
 
 \begin{table}[h]
     \centering
@@ -271,7 +272,7 @@ With a cap on resources, the AGI is pushed toward developing more efficient algo
 Limiting resources can also serve as a safety mechanism. It prevents an AGI from overcommitting or making uncontrolled changes that might require external resources to manage—much like how our biological systems maintain homeostasis. \\
 
 
-Although I remain hopeful about AI's potential, it is clear that \textbf{focusing exclusively on scaling LLMs is a fundamentally flawed approach to achieving General Intelligence}. The issue lies not merely in the scale of LLMs, but in the foundational limitations of the LLM approach. As demonstrated in several examples we have tested, including the three discussed earlier, ChatGPT and similar models continually fail to exhibit true reasoning or understanding beyond pattern recognition. For those interested, additional examples are available on our GitHub link, further proving that the current trajectory of LLM development is unlikely to fulfill the promise of AGI. Intelligence cannot be forced to emerge simply by tuning weights and biases, no matter how large the model's parameters or how extensive the training data. \\
+Although I remain hopeful about AI's potential, it is clear that \textbf{focusing exclusively on scaling LLMs is a fundamentally flawed approach to achieving General Intelligence}. The issue lies not merely in the scale of LLMs, but in the foundational limitations of the LLM approach. As demonstrated in several examples we have tested, including the three discussed earlier, ChatGPT and similar models continually fail to exhibit true reasoning or understanding beyond pattern recognition. For those interested, additional examples are available on our GitHub link \cite{ref8}, further proving that the current trajectory of LLM development is unlikely to fulfill the promise of AGI. Intelligence cannot be forced to emerge simply by tuning weights and biases, no matter how large the model's parameters or how extensive the training data. \\
 
 LLMs, despite their impressive capabilities, are not progressing toward true intelligence—they excel at simulating responses but lack core attributes of intelligence, such as the ability to ask meaningful questions, innovate, or comprehend abstract concepts. \textbf{At best, LLMs can serve as one component within a broader intelligent system, but expecting them to form the sole foundation of AGI is misguided}. Intelligence is not about knowing everything; it is about confronting nuances with limited resources—qualities that cannot be engineered solely through data scaling and model optimization. To build a truly intelligent system, we need to fundamentally rethink our approach. \\ \\
 
@@ -311,18 +312,14 @@ In the race to improve LLMs, we are continually patching their limitations by re
     \bibitem{ref7}
 	Karan Singhal, Shekoofeh Azizi, Tao Tu, S. Sara Mahdavi, Jason Wei, et al. (2022). Large Language Models Encode Clinical Knowledge. arXiv:2212.13138v1.
 	\bibitem{ref8}
-	Replace Me (OpenAI Cofounder) Interview at Dwarkesh Patel Youtube channel (2024). \url{https://www.youtube.com/watch?v=Wo95ob_s_NI&t=2041s}
+	Extra examples, Github Link: \url{https://github.com/ainumbat/ChatGPT4o_issues.git}
 	\bibitem{ref9}
 	François Chollet talk at AGI Conference, ARC Prize Youtube channel (2024). \url{https://www.youtube.com/watch?v=nL9jEy99Nh0&t=1450s}
     
 \end{thebibliography}
 
-\vspace{1cm}
 
-\begin{large}
-\textbf{Github link:} 
-\end{large}
-\url{https://github.com/ainumbat/ChatGPT4o_issues.git}
+
 
 
 
