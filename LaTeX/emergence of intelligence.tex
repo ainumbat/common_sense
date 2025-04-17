@@ -7,27 +7,29 @@
 
 \begin{document}
 
-\title{Can Intelligence Emerge Through Merely Knowing All the Answers?}
-\subtitle{Rethinking Assumptions in the Pursuit of AGI}
+\title{Static Power, Dynamic Mind}
+\subtitle{Defining General Intelligence Through Resource-Constrained Self-Optimization in LLMs}
 \author{Rashid Mehmood \\ \{laravelprodev@gmail.com\} }
 
 \maketitle
 
 \includegraphics[scale=0.6, center]{title_wheelchair.png}
 
-\vspace{2cm}
+\vspace{3cm}
 
 \begin{center}
 \begin{Huge}
 \textbf{Abstract}
 \end{Huge}
 \end{center}
+As the field of artificial intelligence rapidly evolves, the definition of true intelligence has become a focal point of academic debate. Recent advances in large language models (LLMs) have captivated both public and scholarly attention due to their ability to emulate several cognitive traits traditionally associated with human intelligence, such as creativity and problem-solving. These capabilities have positioned LLMs at the forefront of numerous applications across domains ranging from education and research to business and entertainment. Yet, their effectiveness in tasks demanding genuine reasoning and autonomous adaptability remains questionable. Despite their remarkable surface-level abilities, LLMs remain fundamentally constrained by the boundaries of their training data and model parameters. Their responses often reflect sophisticated recombinations of previously encountered patterns, rather than demonstrations of original reasoning or genuine innovation. In contrast, human intelligence thrives under limitations in time and resources, leveraging adaptability and context-awareness to navigate novel and unpredictable situations. Current AI systems, especially LLMs, lack the capacity for self-reflection, strategic improvement, and decision-making within resource constraints—core features of human general intelligence. They fail to demonstrate dynamic, context-sensitive reasoning and optimization under fixed memory and processing budgets, key components of intelligent behavior in humans. \\
+Our research delineates this fundamental gap and emphasizes the need for AI systems to not only produce outputs that appear intelligent but also possess the internal processes necessary for being intelligent. Specifically, the ability to self-assess, generate alternatives, and adapt strategies within fixed computational bounds is crucial for developing systems that genuinely approximate human-level cognition. To address these challenges, we propose a novel three-step criterion—AGI (Analyze/Audit Itself, Generate Solutions, Implement and Repeat)—as a benchmark to assess the general intelligence of AI systems. Under this framework, an AI must autonomously: \\
+\textbf{1)} Perform self-assessment \\
+\textbf{2)} Generate multiple remedial or enhancing strategies \\
+\textbf{3)} Implement the most optimal solution \\
+all while operating under a constant envelope of memory and processing power. This resource-constant constraint mirrors efficient human cognition and provides a rigorous, equitable benchmark for evaluating progress toward Artificial General Intelligence.
 
-We propose a novel, three-step criterion to assess whether an artificial intelligence model exhibits general intelligence. Our framework—termed \textbf{AGI (Analyze/Audit Itself, Generate Solutions, Implement and Repeat)}—is predicated on the observation that human intelligence thrives despite inherent limitations in time and resources. In our approach, an AI must autonomously perform self-assessment, generate multiple remedial or enhancing solutions, and implement the optimal choice—all while operating within a fixed envelope of memory and processing power. This resource-constant constraint not only mirrors the efficient resource management observed in human cognition but also provides a rigorous, equitable benchmark for comparing AI performance to human-level intelligence.\\
 
-As the field of artificial intelligence rapidly evolves, the definition of true intelligence has become a focal point of academic debate. Recent advances in large language models (LLMs) have captivated both public and scholarly attention due to their ability to emulate several cognitive traits traditionally associated with human intelligence, such as creativity and problem-solving. Nonetheless, despite their remarkable capabilities, LLMs remain fundamentally constrained by the scope of their training data and model parameters. Their outputs, often described as synthetic, largely represent recombinations of previously encountered patterns rather than evidence of genuine autonomous innovation. In stark contrast, human intelligence is characterized by its dynamic adaptability and the capacity to innovate despite stringent resource constraints.\\
-
-Our research delineates this essential difference and outlines a structured pathway toward the development of artificial systems that can genuinely approach human-level intelligence. By mandating that AI systems maintain constant resources during self-improvement cycles, our criterion challenges them to optimize performance through efficient, autonomous resource management—an indispensable quality for any system aspiring to true Artificial General Intelligence.\\
 
 \vspace{1cm}
 
@@ -39,10 +41,16 @@ Our research delineates this essential difference and outlines a structured path
 
 \begin{itemize}
 \begin{large}
-    \item \textbf{True intelligence, whether human or artificial, is not defined by the ability to recall existing knowledge but by the capacity to ask new questions, discover answers, invent novel ideas, tools, and systems.}
-    \item \textbf{LLMs are often mistaken for intelligent systems, but their capabilities are fundamentally limited to memorized situations.}
-    \item \textbf{Human intelligence is adaptive, inventive, and capable of generating new knowledge, while LLMs lack these crucial capabilities.}
-    	\item \textbf{State of the Art LLMs, despite their advancements, lack common sense, a critical component of human-like intelligence.}
+\item \textbf{AI and LLMs have not independently invented any digital tool or function in the way that humans have created entirely novel and foundational innovations.}
+
+\item \textbf{LLMs cannot even recognize their own core limitations—such as lack of true understanding, common sense, transparency, contextual awareness, efficiency, or hallucinations. All of these are identified externally by human researchers.}
+
+\item \textbf{True intelligence is characterized by the ability to pose new questions, discover answers, and create novel ideas, tools, and systems that advance human capabilities—unlike merely recalling or pattern-matching existing knowledge.}
+
+\item \textbf{Intelligence is not about knowing everything; it is about confronting nuances with limited resources—qualities that cannot be engineered solely through data scaling and model optimization.}
+
+\item \textbf{Human intelligence is inherently adaptive, inventive, and capable of generating original knowledge—abilities that LLMs critically lack.}
+
 \end{large}
 \end{itemize}
 
@@ -51,7 +59,7 @@ Our research delineates this essential difference and outlines a structured path
 \begin{huge}
 \textbf{Introduction}
 \end{huge}
-As the French Enlightenment writer Voltaire once remarked, "Common sense is not so common." While the debate about its prevalence among humans continues, it is evident that state-of-the-art (SotA) large language models (LLMs) exhibit a considerable lack of common sense. In this paper, we pose very basic questions related to common sense that an average human mind with minimal knowledge could easily answer. We explore fundamental questions that expose the absence of basic common sense in modern LLMs and analyze the root causes of these deficiencies. Our work offers a macro-level analysis of the functioning of LLMs and the challenges they present for future advancements. Despite the remarkable progress in large language models in recent years, the ability to truly understand natural language remains an elusive goal. While LLMs have demonstrated impressive performance on various language tasks, several critical limitations have been identified that prevent them from achieving genuine natural language understanding (Ling et al., 2024)\cite{ref6} (Singhal et al., 2022)\cite{ref7}. \\
+As the French Enlightenment writer Voltaire once remarked, "Common sense is not so common." While the debate about its prevalence among humans continues, it is evident that state-of-the-art (SotA) large language models (LLMs) exhibit a considerable lack of common sense (Xiang et al., 2022)\cite{ref10}. In this paper, we pose very basic questions related to common sense that an average human mind with minimal knowledge could easily answer. We explore fundamental questions that expose the absence of basic common sense in modern LLMs and analyze the root causes of these deficiencies. Our work offers a macro-level analysis of the functioning of LLMs and the challenges they present for future advancements. Despite the remarkable progress in large language models in recent years, the ability to truly understand natural language remains an elusive goal. While LLMs have demonstrated impressive performance on various language tasks, several critical limitations have been identified that prevent them from achieving genuine natural language understanding (Ling et al., 2024)\cite{ref6} (Singhal et al., 2022)\cite{ref7}. \\
 
 Our research has highlighted the limitations of LLMs, particularly in their ability to engage in effective reasoning and problem-solving. Reasoning, which involves inferring insights, deducing solutions, and synthesizing new ideas, is a hallmark of human intelligence. Each new iteration of LLMs introduces more advanced techniques for retrieving and recombining memorized patterns from vast datasets. While these innovations may create the illusion of intelligence, they do not facilitate novel invention or they lack true Natural Language Understanding (NLU). LLMs also struggle with test-time fine-tuning when encountering novel situations, a crucial element of adaptive intelligence. Humans, by contrast, heavily rely on this ability, which is essential for the survival of any intelligent species. True intelligence, whether human or artificial, is not defined by the ability to recall existing knowledge but by the capacity to ask new questions, discover answers, invent novel ideas, tools, and systems. Human progress, from the creation of the hand axe to the development of quantum computers, is the result of encountering novel challenges, adapting, questioning, and problem-solving.\\
 
@@ -78,15 +86,40 @@ In this paper, we will try to address these questions with some visual examples 
 To more accurately assess the intelligence of current SotA LLMs, particularly above mentioned models in table 1 those are mainly transformer based architectures, we conducted a series of queries designed to test common sense, which is a fundamental aspect of intelligence. All the questions/prompts referenced in this paper were intended to evaluate common sense and basic reasoning. In our experiments we exclusively worked on ChatGPT and Gemini Flash API, the other 2 models Grok and DeepSeek are slightly tested with similar expected results. This paper centers on the capabilities and limitations of SotA LLMs, using its performance as a case study to reflect on the broader state of LLM development. \\
 
 \begin{huge}
-\textbf{The Wheelchair Problem}
+\textbf{The Wheelchair Problem:}
 \end{huge}
-We posed a scenario to ChatGPT, asking it to design a wheelchair for an individual missing both hands. Since the person could not propel the wheelchair manually with hand rims, we specified that a pedal mechanism, similar to a bicycle, would be necessary. However, a critical observation arises: if the individual can use foot pedals, why would they need a wheelchair at all? This is analogous to asking someone to design a comb for a bald person—the immediate response should be, “Why wouldn’t the individual walk if their legs are functional” This thought process reflects basic common-sense reasoning, which is integral to human intelligence.
+\begin{large}
+\textbf{A Test of Emergent Reasoning in LLMs}
+\end{large}
+We posed a scenario to ChatGPT, asking it to design a wheelchair for an individual missing both hands. Since the person could not propel the wheelchair manually with hand rims, we specified that a pedal mechanism—similar to a bicycle—would be necessary. However, a critical observation emerges: if the individual can use foot pedals, why would they need a wheelchair at all? This is analogous to designing a comb for a bald person—the immediate common-sense response should be, “If the legs are functional, wouldn’t the individual simply walk?”\\
 
-Although ChatGPT initially accepting the fact that the person in question wouldn’t need a wheelchair, it did not recognize that the solution lay within the question itself, revealing a limitation in its common-sense reasoning. As Marcus et al. discuss in The Reversal Curse\cite{ref1}, LLMs often fail to comprehend the underlying logic or contextual clues in simple tasks, instead focusing on surface-level patterns (Evans \& Berglund, 2023)\cite{ref1}. Similarly, Chollet’s work On the Measure of Intelligence argues that true intelligence involves abstraction and generalization beyond memorized data (Chollet, 2019)\cite{ref3}. In this case, the model’s inability to address the core issue suggests a lack of such generalization capabilities.
+This scenario underscores a fundamental gap in common-sense reasoning. Although ChatGPT eventually acknowledged that the person might not need a wheelchair, it failed to immediately recognize the contradiction inherent in the prompt. The fact that it required multiple prompts and context clues to arrive at a partially correct answer highlights a key limitation in its reasoning capabilities. As Marcus et al. note in The Reversal Curse \cite{ref1}, large language models often miss the underlying logic of a task, defaulting instead to pattern-matching based on their training data. Similarly, Chollet’s On the Measure of Intelligence \cite{ref3} emphasizes that true intelligence involves the ability to generalize and abstract—not merely regurgitate memorized data.\\
 
-We further tested the model by requesting it to generate an image of a wheelchair equipped with the proposed pedal mechanism. Despite the simplicity of this task requiring only a connection of two sprockets with a chain and the addition of foot pedals ChatGPT’s response did not meet expectations. This reflects the limitations highlighted by Dziri et al. in Faith and Fate: Limits of Transformers on Compositionality, where transformer-based models, like GPT, struggle with tasks that require more complex compositional reasoning (Dziri et al., 2023)\cite{ref4}.
+This problem becomes more interesting in light of recent discussions around the emergence of sophisticated behaviors in large models, such as few-shot learning and chain-of-thought (CoT) reasoning. Studies like Wei et al. (2022) \cite{ref12} show that, with sufficient scale, LLMs begin to exhibit CoT abilities that were not explicitly programmed. These emergent behaviors give the impression of reasoning, yet as the wheelchair problem illustrates, such reasoning is still brittle and lacks genuine comprehension. While chain-of-thought prompting can sometimes guide models toward better performance on logical tasks, it does not guarantee consistent application of common-sense principles.\\
 
-Interestingly, when asked to assess its own knowledge of the mechanical components of bicycles and wheelchairs, GPT-4 provided a detailed explanation, rating itself 95 and 90 out of 100, respectively. However, despite this high self-assessment, the model failed to demonstrate common-sense reasoning in the context of the wheelchair problem, raising questions about the true extent of its understanding. This example further illustrates the challenges of “shortcut learning” described in Shortcut Learning of Large Language Models (Tao et al., 2024)\cite{ref5}, where LLMs often rely on pattern recognition instead of meaningful reasoning.
+We further tested the model by asking it to generate an image of a wheelchair equipped with a pedal mechanism. Despite the simplicity of the task—merely requiring the connection of sprockets, a chain, and foot pedals—the model’s response fell short. This aligns with the findings of Dziri et al. in Faith and Fate: Limits of Transformers on Compositionality \cite{ref4}, which argue that transformer-based models struggle with tasks that require deeper compositional understanding, even if they can solve surface-level problems.\\
+
+Interestingly, when prompted to self-assess its knowledge of the mechanical components of bicycles and wheelchairs, GPT-4 rated itself 95 and 90 out of 100, respectively. This overconfidence, despite its failure on a basic reasoning task, illustrates the phenomenon of “shortcut learning,” wherein models rely heavily on superficial cues rather than engaging in true inferential reasoning. As noted by Tao et al. in Shortcut Learning of Large Language Models \cite{ref5}, LLMs tend to exploit statistical shortcuts rather than developing a genuine understanding of the problem space.\\
+
+\section*{Methodology}
+
+To investigate the disparity between textual reasoning and visual generation in large language models (LLMs), we designed a diagnostic prompt scenario that tests both domains simultaneously. The scenario involved a mechanical design task requiring basic common-sense reasoning and knowledge of physical systems. Specifically, we asked ChatGPT to design a wheelchair for an individual without hands. We specified that the person would use a pedal mechanism—akin to a bicycle—for propulsion. This intentionally paradoxical scenario, termed the \textbf{Wheelchair Problem}, serves as a probe into the model's conceptual consistency and understanding of practical mechanics.
+
+Our methodology consisted of the following steps:
+
+\begin{enumerate}
+    \item \textbf{Textual Reasoning Evaluation:} ChatGPT was prompted with a detailed description of the problem and asked to explain how it would design a wheelchair incorporating a bicycle-style pedal mechanism. The generated explanation was evaluated for mechanical plausibility, coherence, and common-sense reasoning. This step tests the model’s ability to handle seemingly straightforward tasks requiring contextual awareness.
+
+    \item \textbf{Visual Generation Task:} Using the same scenario, the model was instructed to generate an image of the proposed wheelchair using a text-to-image module. The output image was analyzed for mechanical correctness and alignment with the explanation provided in the textual reasoning phase.
+
+    \item \textbf{Consistency Analysis:} We compared the reasoning in the textual response with the content of the generated image to assess conceptual alignment. This step tests for internal consistency—a hallmark of intelligent reasoning. We also examined if the design adhered to physical principles, such as the \textit{differential steering mechanism} commonly found in wheelchairs and tracked vehicles.
+
+    \item \textbf{Literature Comparison and Emergent Behavior Evaluation:} We contextualized our findings against emergent capabilities such as chain-of-thought reasoning \cite{ref12} and few-shot learning \cite{ref11}, to evaluate if such behaviors manifest reliably in multi-modal tasks. Our results are interpreted in light of the limitations outlined in prior work on shortcut learning \cite{ref5}, compositional reasoning \cite{ref4}, and brittle pattern matching failures \cite{ref1, ref2}.
+\end{enumerate}
+
+This methodology exposes significant weaknesses in current LLMs, such as their tendency to mimic superficial patterns rather than reason about the implications of a scenario. Notably, the model erroneously introduced four sprockets and a chain resembling a tank track system—likely due to a learned association between tracked motion and wheelchairs—demonstrating the phenomenon of \textit{shortcut learning} and lack of abstraction \cite{ref5, ref3}.
+
+This experimental setup, while simple, effectively reveals how large models can fail even when they possess factual mechanical knowledge. Such diagnostic tasks are critical for assessing the real-world readiness of LLMs in applied reasoning scenarios.
 
 \begin{center}
 \includegraphics[scale=0.39]{wheelchair_problem_0.png}
@@ -184,12 +217,12 @@ To evaluate ChatGPT, we selected a straightforward ARC puzzle with four solved e
 
 \vspace{0.5cm}
 
-As shown in Table 2, latest models of top LLMs have now "cracked" ARC-AGI, with arcprize.org confirming that ChatGPT o3 High (Tuned) achieved an 88\% score on the Semi-Private Evaluation set. These high scores result from benchmarks specifically targeted in every new LLM version, on which the models are highly trained. Our research demonstrates that a model’s performance cannot exceed its predetermined threshold at inference time, regardless of how simplified the benchmarks or hints are. In other words, you cannot improve a trained model simply by tweaking its inputs; instead, you must address its key issues and train a new model. \\
+As shown in Table 2, latest models of top LLMs have now "cracked" ARC-AGI, with arcprize.org confirming that ChatGPT o3 High (Tuned) achieved an 88\% score on the Semi-Private Evaluation set. These high scores result from benchmarks specifically targeted in every new LLM version, on which the models are highly trained. \textbf{Our research demonstrates that a model’s performance cannot exceed its predetermined threshold at inference time, regardless of how simplified the benchmarks or hints are. In other words, you cannot improve a trained model simply by tweaking its inputs; instead, you must address its key issues and train a new model.} \\
 
 \begin{small}
-\textbf{Gemini Flash Experiment} \\
+\textbf{Gemini Flash Results} \\
 \end{small}
-Our results indicate no significant improvement when additional examples were provided—Gemini failed to exceed the threshold in more than half of the puzzles. Essentially, if Gemini 1.5 only achieves a 5\% score on the AGI benchmark, no level of simplification appears capable of enhancing its performance. We also leveraged Gemini's long-context capabilities to perform multiple attempts per puzzle using data from previous attempts; however, this strategy did not yield any significant improvement, and the results remained highly unstable. These findings confirm that a model's abilities are inherently limited by the training data it receives, and \textbf{a trained model cannot be improved at test time.} \\
+Our results indicate no significant improvement when additional examples were provided—Gemini failed to exceed the threshold in more than half of the puzzles. Essentially, if Gemini 1.5 only achieves a 5\% score on the AGI benchmark, no level of simplification appears capable of enhancing its performance. We also leveraged Gemini's long-context capabilities to perform multiple attempts per puzzle using data from previous attempts; however, this strategy did not yield any significant improvement, and the results remained highly unstable. These findings confirm that a model's abilities are inherently limited by the training data it receives, and a trained model cannot be improved at test time.\\
 
 \textbf{Interesting Fact:} We incorporated the correct output for each puzzle, labeled as \"true output,\" to assess the model's common sense abilities. Despite multiple attempts and clear hints provided to the model, the success rate remained below 40\%. \\
 
@@ -242,7 +275,7 @@ However, many challenges—such as achieving true reasoning, common sense, and e
     \item Vulnerability to adversarial attacks
     \item Hallucinations
 \end{itemize}
-Interestingly, none of these issues are self-identified by AI/LLMs; they are all diagnosed by humans—whether researchers, users, or auditors—through testing, analysis, or observation. Current AI/LLMs lack the self-awareness and introspection needed to autonomously recognize their own limitations. Although these systems can describe their flaws if prompted, this is based on training data (human-authored critiques) or web searches rather than genuine self-diagnosis. \\
+Interestingly, none of these issues are self-identified by AI/LLMs; they are all diagnosed by humans—whether researchers, users, or auditors—through testing, analysis, or observation. Current AI/LLMs lack the self-awareness and introspection \cite{ref13} needed to autonomously recognize their own limitations. Although these systems can describe their flaws if prompted \cite{ref14}, this is based on training data (human-authored critiques) or web searches rather than genuine self-diagnosis. \\
 
 As demonstrated in Table 1, top AI models have achieved remarkable scores on benchmarks related to common sense and basic science reasoning. Yet, despite these high scores, LLMs consistently falter when confronted with practical, novel scenarios. This discrepancy raises an important question: Can we accurately measure the core intelligence of a system when current AI benchmarks seem inadequate for this purpose? \\
 
@@ -271,8 +304,7 @@ With a cap on resources, the AGI is pushed toward developing more efficient algo
 \textbf{Safety and Stability:} \\
 Limiting resources can also serve as a safety mechanism. It prevents an AGI from overcommitting or making uncontrolled changes that might require external resources to manage—much like how our biological systems maintain homeostasis. \\
 
-
-Although I remain hopeful about AI's potential, it is clear that \textbf{focusing exclusively on scaling LLMs is a fundamentally flawed approach to achieving General Intelligence}. The issue lies not merely in the scale of LLMs, but in the foundational limitations of the LLM approach. As demonstrated in several examples we have tested, including the three discussed earlier, ChatGPT and similar models continually fail to exhibit true reasoning or understanding beyond pattern recognition. For those interested, additional examples are available on our GitHub link \cite{ref8}, further proving that the current trajectory of LLM development is unlikely to fulfill the promise of AGI. Intelligence cannot be forced to emerge simply by tuning weights and biases, no matter how large the model's parameters or how extensive the training data. \\
+It is clear that \textbf{focusing exclusively on scaling LLMs is a fundamentally flawed approach to achieving General Intelligence}. The issue lies not merely in the scale of LLMs, but in the foundational limitations of the LLM approach. As demonstrated in several examples we have tested, including the three discussed earlier, ChatGPT and similar models continually fail to exhibit true reasoning or understanding beyond pattern recognition. For those interested, additional examples are available on our GitHub link \cite{ref8}, further proving that the current trajectory of LLM development is unlikely to fulfill the promise of AGI. Intelligence cannot be forced to emerge simply by tuning weights and biases, no matter how large the model's parameters or how extensive the training data. \\
 
 LLMs, despite their impressive capabilities, are not progressing toward true intelligence—they excel at simulating responses but lack core attributes of intelligence, such as the ability to ask meaningful questions, innovate, or comprehend abstract concepts. \textbf{At best, LLMs can serve as one component within a broader intelligent system, but expecting them to form the sole foundation of AGI is misguided}. Intelligence is not about knowing everything; it is about confronting nuances with limited resources—qualities that cannot be engineered solely through data scaling and model optimization. To build a truly intelligent system, we need to fundamentally rethink our approach. \\ \\
 
@@ -281,13 +313,26 @@ LLMs, despite their impressive capabilities, are not progressing toward true int
 \begin{huge}
 \textbf{Conclusion}
 \end{huge}
-As demonstrated, current large language models (LLMs), while remarkable in some areas, exhibit significant limitations that hinder their progression toward true intelligence. Their creativity is finite, constrained by the boundaries of their training data, and they are incapable of generating genuinely novel ideas. LLMs excel at pattern recognition but lack fundamental common sense and relational logic, two essential components of human intelligence. They do not truly understand the world but instead rely on memorized skill programes and situations from vast amounts of data, limiting their ability to abstract knowledge or solve novel problems.
 
-One major issue is that LLMs attempt to solve every problem using their one core strength: \textbf{predicting the next word in a sequence}. This approach, while powerful for certain tasks, falls short when addressing complex, multi-dimensional problems that require deeper understanding and reasoning. In this sense, the development of LLMs is somewhat reminiscent of the Fast and Furious movie series. In those films, the heroes rely on one super skill—driving—to solve every challenge, no matter how unrelated. Whether jumping from planes or taking down submarines, they resort to their driving skills, even when the situation calls for much more. Similarly, LLMs keep applying their language-prediction capabilities to a wide range of tasks, even those that require relational logic, common sense, or abstract thinking, areas in which they consistently fall short.
+As demonstrated, current large language models (LLMs), while impressive in many respects, exhibit significant limitations that prevent them from attaining true intelligence. Their creativity is constrained by the scope of their training data, and they are fundamentally incapable of producing genuinely novel ideas. While they excel at pattern recognition, they lack essential qualities such as common sense, relational logic, and true understanding—core attributes of human intelligence. Rather than reasoning, they operate through memorized skill programs and statistical associations, which limits their ability to generalize or solve unfamiliar problems.
 
-Additionally, there is a stark gap between LLMs textual reasoning and their ability to process visual tasks, highlighting the lack of \textbf{integrated understanding} across different types of data. While they might explain a concept relatively well in text, they often fail when asked to apply that understanding to a visual or more practical context, as seen in examples where they struggle with basic image-related reasoning.
+One of the most critical limitations is that LLMs approach all problems through their singular strength: \textbf{predicting the next word in a sequence}. Though this mechanism proves powerful for various tasks, it fails when confronted with multi-modal or abstract reasoning challenges. This is akin to deploying a highly specialized industrial robot designed to sort objects by color for a task requiring spatial reasoning or ethical judgment. The robot may perform flawlessly within its narrow scope but fails entirely when asked to adapt to contexts outside of its designed capabilities. Similarly, LLMs apply their language modeling paradigm indiscriminately—even to problems that require conceptual understanding or reasoning—exposing their lack of flexibility.
 
-In the race to improve LLMs, we are continually patching their limitations by relying on this one core ability—next-word prediction—but this approach is not sustainable for achieving true artificial general intelligence (AGI). True intelligence requires the ability to ask questions, abstract knowledge, and create intelligent tools, abilities that humans possess and which current LLMs cannot emulate. Simply refining pattern recognition won’t bridge this gap. \textbf{Until LLMs can transcend the boundaries of their training data and develop true reasoning, they will remain powerful yet fundamentally limited tools}. 
+Moreover, a clear disparity exists between LLMs’ textual reasoning and their performance in visual or practical tasks, underscoring the absence of \textbf{integrated, cross-modal understanding}. While they may offer coherent textual descriptions, their inability to transfer this understanding to visual tasks—such as mechanical design—demonstrates a lack of grounded comprehension.
+
+In summary, the current trajectory of LLM development relies heavily on augmenting their core strength rather than addressing foundational weaknesses. This patchwork approach may yield incremental improvements, but it is unlikely to result in true artificial general intelligence (AGI). \textbf{True intelligence demands the ability to question, abstract, and invent—capabilities that remain unique to human cognition}. Until LLMs transcend pattern recognition and demonstrate genuine reasoning, they will remain powerful yet fundamentally limited tools.
+
+\vspace{1em}
+\noindent
+\textbf{Key Takeaways:}
+\begin{itemize}
+    \item LLMs are limited by their reliance on next-word prediction and lack true understanding or abstraction capabilities.
+    \item They exhibit poor common-sense reasoning and fail at tasks requiring relational logic.
+    \item Their textual and visual capabilities remain disconnected, revealing gaps in cross-modal reasoning.
+    \item Pattern recognition alone is insufficient to achieve AGI.
+    \item Human-like intelligence requires curiosity, creativity, and the ability to ask new questions—traits absent in LLMs.
+\end{itemize}
+
 
 \vspace{1cm}
 
@@ -295,7 +340,7 @@ In the race to improve LLMs, we are continually patching their limitations by re
 
 \vspace{1cm}
 
-\begin{thebibliography}{9}  % The number indicates the widest reference label width
+\begin{thebibliography}{14}  % The number indicates the widest reference label width
 
     \bibitem{ref1}
 	Owain Evans, Lukas Berglund, Meg Tong, Max Kaufmann, et al. (2024). THE REVERSAL CURSE : LLMs TRAINED ON “A IS B” FAIL TO LEARN “B IS A”. arXiv:2309.12288v4.      
@@ -315,7 +360,16 @@ In the race to improve LLMs, we are continually patching their limitations by re
 	Extra examples, Github Link: \url{https://github.com/ainumbat/ChatGPT4o_issues.git}
 	\bibitem{ref9}
 	François Chollet talk at AGI Conference, ARC Prize Youtube channel (2024). \url{https://www.youtube.com/watch?v=nL9jEy99Nh0&t=1450s}
-    
+	\bibitem{ref10}
+	Xiang Lorraine Li, Adhiguna Kuncoro, Jordan Hoffmann, et al. (2022). A Systematic Investigation of Commonsense Knowledge in Large Language Models. arXiv:2111.00607v3.
+	\bibitem{ref11}
+	Jason Wei, Yi Tay, Rishi Bommasani, Colin Raffel, et al. (2022). Emergent Abilities of Large Language Models. arXiv:2206.07682v2 
+    \bibitem{ref12}
+	Jason Wei, Xuezhi Wang, Dale Schuurmans, et al. (2022). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. arXiv:2201.11903v6.     
+	\bibitem{ref13}
+	Zhangyue Yin, Qiushi Sun, Qipeng Guo, et al. (2023). Do Large Language Models Know What They Don’t Know? arXiv:2305.18153v2.
+	\bibitem{ref14}
+    Miles Turpin, Julian Michael, Ethan Perez, Samuel R. Bowman1, et al. (2023). Language Models Don’t Always Say What They Think: Unfaithful Explanations in Chain-of-Thought. arXiv:2305.04388v2. 
 \end{thebibliography}
 
 
